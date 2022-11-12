@@ -9,6 +9,19 @@
 a {
   color: white;
 }
+.btn {
+  width: 140px;
+  height: 35px;
+  background-color: green;
+  border-radius: 25px;
+  text-align: center;
+  padding-top: 8px;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px black;
+}
+
 .small-btn {
   height: 30px;
   width: 80px;
@@ -53,11 +66,10 @@ header {
   font-weight: 500;
   font-size: large;
   margin-left: 30px;
-  height: 38px;
+  /* height: 38px;
   width: 110px;
   background-color: green;
-  /* transition: 0.3s ease; */
-  border-radius: 24px;
+  border-radius: 24px; */
 }
 
 .navbtn ul li:hover {
@@ -68,11 +80,6 @@ header {
   width: 100%;
   height: 45px;
   background-color: green;
-}
-.nav-btn-search {
-  display: flex;
-  justify-content: space-between;
-  /* padding-top: 10px; */
 }
 
 .nav-btn ul {
@@ -116,36 +123,15 @@ header {
 }
 
 /* ------------------------- main content -------------------- */
-.main-content {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-}
-
 section {
   margin-top: 50px;
 }
-
-.first-text-content {
-  width: 50%;
-}
-
-.first-text-content h1 {
-  font-size: xx-large;
-  font-weight: 600;
-}
-.first-text-content p {
-  font-size: 18px;
+.paragraph {
+  font-size: large;
   font-weight: 500;
   line-height: 23px;
+  letter-spacing: 1px;
 }
-
-.main-img img {
-  height: 350px;
-  border-radius: 5px;
-  width: 500px;
-}
-
 /*---------------------------------- category section ------------------------ */
 #statistic {
   width: 100%;
@@ -183,4 +169,159 @@ section {
 }
 .left-arrow {
   padding-top: 140px;
+}
+/* ********************** courses section (*************** */
+.course {
+  background-color: rgb(243, 243, 243);
+  margin-top: 0;
+}
+.course-btn {
+  border-right: 1px lightgray solid;
+  height: 400px;
+  text-align: center;
+  padding-top: 5%;
+}
+.course-btn h1 {
+  margin: 10px 0;
+  letter-spacing: 5px;
+  font-size: xx-large;
+}
+.course-btn p {
+  letter-spacing: 2px;
+  font-size: large;
+}
+.course-btn ul li {
+  margin: 25px 0 0 180px;
+}
+
+.try-sec {
+  width: 50%;
+}
+.try {
+  width: 80%;
+  height: 355px;
+  margin: 30px auto;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.try-link {
+  margin: 5px 0;
+  background-color: white;
+  height: 272px;
+  border-radius: 10px;
+
+  border: 1px solid lightgray;
+}
+
+/* **********************  all courses section **************** */
+.all-courses {
+  display: flex;
+  margin-top: 50px;
+}
+.course-card {
+  width: 430px;
+  height: 170px;
+  margin: 0 55px;
+  border: 1px solid lightgray;
+  box-shadow: 1px 1px 5px lightgray;
+}
+.course-card h1 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: xx-large;
+  padding-top: 30px;
+}
+.course-card p {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: large;
+  margin: 5px 0;
+}
+.course-card ul li {
+  margin-left: 143px;
+}
+.course-card ul li:hover {
+  cursor: pointer;
+}
+section a h1 {
+  margin-left: 190px;
+  color: rgb(56, 22, 168);
+  display: inline;
+  text-decoration: underline;
+}
+section a h1:hover {
+  color: gray;
+}
+
+/* ****************** join us section ****************** */
+.row {
+  display: flex;
+}
+.l6 {
+  width: 50%;
+  text-align: center;
+}
+.col {
+  margin: 0 10px;
+}
+
+.responsive-img {
+  width: 100%;
+  height: 100%;
+}
+
+#join-us-text {
+  margin-top: 20px;
+  line-height: 25px;
+}
+.join-us-btn {
+  margin: 30px 0 0 180px;
+}
+.title {
+  letter-spacing: 2px;
+  font-size: xx-large;
+  margin: 15px 0;
+}
+
+/* ************************ contact us ************************* */
+#contact-us {
+  height: 400px;
+}
+.sub-btn {
+  width: 70px;
+  height: 30px;
+  background-color: rgb(121, 110, 106);
+  border-radius: 5px;
+  border: none;
+}
+.sub-btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px black;
+}
+.input-field {
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: lightgray;
+  outline: none;
+}
+.message {
+  height: 100px;
+}
+.input-field:focus {
+  box-shadow: 1px 1px 7px black;
+}
+.col {
+  text-align: left;
+}
+.col form {
+  padding: 60px 0 0 40px;
+  height: 400px;
+}
+.send-us-mes-text {
+  text-align: center;
+  padding-top: 60px;
 }

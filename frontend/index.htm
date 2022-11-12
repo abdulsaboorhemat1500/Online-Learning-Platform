@@ -11,61 +11,76 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- ****************** header section ************************* -->
     <header>
       <div class="container navbar">
         <div class="logo">
           <a href="index.htm"><h1>Code Tutor</h1></a>
         </div>
-        <div class="navbtn btn">
+        <div class="navbtn">
           <ul>
-            <li><a href="#">Sign In</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li class="btn"><a href="#">Sign In</a></li>
+            <li class="btn"><a href="#">Sign Up</a></li>
           </ul>
         </div>
       </div>
     </header>
+    <!-- ******************* section navbar *********************** -->
     <nav class="nav-wrapper">
-      <div class="container nav-btn-search">
-        <div class="nav-btn">
-          <ul>
-            <li><a href="#">Explore Tutorials</a></li>
-            <li><a href="#">References</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </div>
-        <div class="search-bar">
-          <form action="">
-            <input
-              type="search"
-              name=""
-              id=""
-              placeholder="What do you want to learn?"
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="submit" value="Search" />
-          </form>
+      <div class="container">
+        <div class="row">
+          <div class="col l6">
+            <div class="nav-btn">
+              <ul>
+                <li><a href="#">Explore Tutorials</a></li>
+                <li><a href="#">References</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col l6">
+            <div class="search-bar">
+              <form action="">
+                <input
+                  type="search"
+                  name=""
+                  id=""
+                  placeholder="What do you want to learn?"
+                />
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="submit" value="Search" />
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
+    <!-- ***************** bellow navbar section *************** -->
     <section>
-      <div class="container main-content">
-        <div class="first-text-content">
-          <h1>Grow Your skills to advance your career path</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-            necessitatibus vitae alias dolores iste sapiente impedit ducimus
-            qui, non amet soluta dicta. Illum impedit incidunt, reiciendis dolor
-            optio possimus, eveniet, mollitia soluta earum dicta harum maxime
-            ipsa libero ab nemo hic cupiditate illo aliquid dolorum commodi
-            veritatis molestias! Dolorum, facilis.
-          </p>
-          <br />
-          <br />
-          <input type="button" class="small-btn" value="Start Now" />
-        </div>
-        <div class="main-img">
-          <img src="img/coding.jpg" alt="haha change your browser" />
+      <div class="container">
+        <div class="row">
+          <div class="col l6">
+            <h1 class="title">Grow Your skills to advance your career path</h1>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
+              necessitatibus vitae alias dolores iste sapiente impedit ducimus
+              qui, non amet soluta dicta. Illum impedit incidunt, reiciendis
+              dolor optio possimus, eveniet, mollitia soluta earum dicta harum
+              maxime ipsa libero ab nemo hic cupiditate illo aliquid dolorum
+              commodi veritatis molestias! Dolorum, facilis.
+            </p>
+            <br />
+            <br />
+            <input type="button" class="small-btn" value="Start Now" />
+          </div>
+          <div class="col l6">
+            <img
+              class="responsive-img"
+              src="img/coding.jpg"
+              alt="haha change your browser"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -132,6 +147,148 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <!-- **************** course exercise section ***************** -->
+    <section class="course">
+      <div class="container">
+        <div class="row">
+          <div class="col l6">
+            <div class="course-btn">
+              <h1>HTML</h1>
+              <p>The language of building Web pages.</p>
+              <ul>
+                <li class="btn"><a href="#">Learn HTML</a></li>
+                <li class="btn"><a href="#">Learn HTML</a></li>
+                <li class="btn"><a href="#">Learn HTML</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col l6">
+            <div class="try">
+              <div class="container">
+                <h1>HTML Exercise</h1>
+                <div class="try-link">
+                  <iframe src="new.pdf" frameborder="0"></iframe>
+                </div>
+                <ul>
+                  <li class="btn"><a href="#">Try it Yourself</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***************** All courses section ********************* -->
+    <section>
+      <a href="#"><h1>All Courses</h1></a>
+      <div class="container all-courses">
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>High level Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
+        </div>
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>High level Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container all-courses">
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>High level Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
+        </div>
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>High level Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container all-courses">
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>High level Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
+        </div>
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>High level Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- ****************** join us section ********************** -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col l6">
+            <img class="responsive-img" src="img/coding.jpg" alt="" />
+          </div>
+          <div class="col l6">
+            <h1 class="title">
+              Take the next step toward your personal and professional goals
+              with (Code Tutor).
+            </h1>
+            <p id="join-us-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              voluptate provident, ipsam pariatur voluptatum fuga! Laborum
+            </p>
+            <ul>
+              <li class="join-us-btn btn"><a href="#">Join For Free</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***************** feedback section *********************** -->
+    <section id="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 send-us-mes-text">
+            <h1 class="title">Send Us Message</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem necessitatibus nisi tempora asperiores cupiditate
+              debitis unde consectetur voluptate fugit quis.
+            </p>
+          </div>
+          <div class="col l6">
+            <form action="">
+              <label for="">Your Name:</label>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Enter Your name "
+              /><br />
+              <label for="">Your Email:</label> <br />
+              <input
+                class="input-field"
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter Your Email Address "
+              /><br />
+              <label for="message">Your Message:</label> <br />
+              <textarea class="input-field message"></textarea>
+              <br />
+              <button class="sub-btn" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
