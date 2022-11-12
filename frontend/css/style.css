@@ -5,6 +5,25 @@
   list-style: none;
   box-sizing: border-box;
 }
+.row {
+  display: flex;
+}
+.l6 {
+  width: 50%;
+  text-align: center;
+}
+.l3 {
+  width: 25%;
+  text-align: center;
+}
+.col {
+  margin: 0 10px;
+}
+
+.responsive-img {
+  width: 100%;
+  height: 100%;
+}
 
 a {
   color: white;
@@ -66,12 +85,7 @@ header {
   font-weight: 500;
   font-size: large;
   margin-left: 30px;
-  /* height: 38px;
-  width: 110px;
-  background-color: green;
-  border-radius: 24px; */
 }
-
 .navbtn ul li:hover {
   cursor: pointer;
 }
@@ -81,16 +95,13 @@ header {
   height: 45px;
   background-color: green;
 }
-
 .nav-btn ul {
   display: flex;
 }
-
 .nav-btn ul li {
   padding: 10px 12px 0;
   font-size: 18px;
 }
-
 .nav-btn ul li:hover {
   cursor: pointer;
   color: black;
@@ -100,7 +111,6 @@ header {
 .search-bar {
   padding-top: 10px;
 }
-
 .search-bar input[type="search"] {
   height: 28px;
   width: 250px;
@@ -121,7 +131,6 @@ header {
   cursor: pointer;
   background-color: rgb(133, 133, 133);
 }
-
 /* ------------------------- main content -------------------- */
 section {
   margin-top: 50px;
@@ -151,68 +160,19 @@ section {
 .card {
   line-height: 22px;
   background-color: white;
-  width: 220px;
+  width: 230px;
   height: 310px;
   border-radius: 15px;
+  box-shadow: 1px 1px 5px black;
 }
-.card-img img {
-  width: 220px;
-  height: 170px;
+.card-img {
   border-radius: 15px 15px 0 0;
 }
-
 .card-content {
+  padding: 10px 0;
+  line-height: 25px;
   text-align: center;
 }
-.right-arrow {
-  padding-top: 140px;
-}
-.left-arrow {
-  padding-top: 140px;
-}
-/* ********************** courses section (*************** */
-.course {
-  background-color: rgb(243, 243, 243);
-  margin-top: 0;
-}
-.course-btn {
-  border-right: 1px lightgray solid;
-  height: 400px;
-  text-align: center;
-  padding-top: 5%;
-}
-.course-btn h1 {
-  margin: 10px 0;
-  letter-spacing: 5px;
-  font-size: xx-large;
-}
-.course-btn p {
-  letter-spacing: 2px;
-  font-size: large;
-}
-.course-btn ul li {
-  margin: 25px 0 0 180px;
-}
-
-.try-sec {
-  width: 50%;
-}
-.try {
-  width: 80%;
-  height: 355px;
-  margin: 30px auto;
-  background-color: lightgray;
-  border-radius: 10px;
-}
-.try-link {
-  margin: 5px 0;
-  background-color: white;
-  height: 272px;
-  border-radius: 10px;
-
-  border: 1px solid lightgray;
-}
-
 /* **********************  all courses section **************** */
 .all-courses {
   display: flex;
@@ -252,24 +212,12 @@ section a h1 {
 section a h1:hover {
   color: gray;
 }
-
 /* ****************** join us section ****************** */
-.row {
-  display: flex;
+#join-us-section {
+  background-color: lightgrey;
+  padding-top: 45px;
+  height: 450px;
 }
-.l6 {
-  width: 50%;
-  text-align: center;
-}
-.col {
-  margin: 0 10px;
-}
-
-.responsive-img {
-  width: 100%;
-  height: 100%;
-}
-
 #join-us-text {
   margin-top: 20px;
   line-height: 25px;
@@ -280,6 +228,7 @@ section a h1:hover {
 .title {
   letter-spacing: 2px;
   font-size: xx-large;
+  font-weight: 600;
   margin: 15px 0;
 }
 
@@ -288,9 +237,9 @@ section a h1:hover {
   height: 400px;
 }
 .sub-btn {
-  width: 70px;
-  height: 30px;
-  background-color: rgb(121, 110, 106);
+  width: 75px;
+  height: 32px;
+  background-color: lightgray;
   border-radius: 5px;
   border: none;
 }
@@ -309,19 +258,30 @@ section a h1:hover {
   outline: none;
 }
 .message {
-  height: 100px;
+  height: 120px;
 }
 .input-field:focus {
   box-shadow: 1px 1px 7px black;
 }
-.col {
+#message-form {
   text-align: left;
-}
-.col form {
-  padding: 60px 0 0 40px;
-  height: 400px;
+  padding-left: 40px;
 }
 .send-us-mes-text {
   text-align: center;
-  padding-top: 60px;
+}
+/* &&&&&&****************** footer******************* */
+footer {
+  background-color: gray;
+  height: 250px;
+  padding-top: 40px;
+}
+.footer-links {
+  text-align: left;
+  line-height: 25px;
+}
+#last-footer {
+  background-color: lightgray;
+  text-align: center;
+  height: 25px;
 }
