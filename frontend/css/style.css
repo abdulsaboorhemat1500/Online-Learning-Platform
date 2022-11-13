@@ -19,7 +19,6 @@
 .col {
   margin: 0 10px;
 }
-
 .responsive-img {
   width: 100%;
   height: 100%;
@@ -31,7 +30,7 @@ a {
 .btn {
   width: 140px;
   height: 35px;
-  background-color: green;
+  background-color: rgb(14, 187, 255);
   border-radius: 25px;
   text-align: center;
   padding-top: 8px;
@@ -46,39 +45,35 @@ a {
   width: 80px;
   color: white;
   border: none;
-  background-color: green;
+  border-radius: 5px;
+  background-color: rgb(14, 187, 255);
 }
 .small-btn:hover {
   cursor: pointer;
-  background-color: rgb(7, 109, 7);
+  background-color: rgb(14, 187, 255);
   box-shadow: 1px 1px 7px gray;
 }
 .container {
   width: 80%;
   margin: auto;
 }
-
 /* *************************   first navbar ******************************** */
 header {
   width: 100%;
   height: 60px;
-  border: 1px solid rgb(228, 221, 221);
   box-shadow: 5px black;
 }
 .logo h1 {
-  color: rgb(30, 30, 148);
+  color: black;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
 }
-
 .navbtn ul {
   display: flex;
 }
-
 .navbtn ul li {
   text-align: center;
   padding-top: 8px;
@@ -93,7 +88,7 @@ header {
 .nav-wrapper {
   width: 100%;
   height: 45px;
-  background-color: green;
+  background-color: rgb(14, 187, 255);
 }
 .nav-btn ul {
   display: flex;
@@ -104,23 +99,25 @@ header {
 }
 .nav-btn ul li:hover {
   cursor: pointer;
-  color: black;
-  background-color: rgb(68, 138, 68);
+  background-color: rgb(30, 150, 230);
   height: 45px;
 }
 .search-bar {
   padding-top: 10px;
 }
 .search-bar input[type="search"] {
-  height: 28px;
-  width: 250px;
+  height: 30px;
+  width: 270px;
   border-radius: 5px;
   outline: none;
   padding-left: 6px;
   border: none;
 }
+.search-bar input[type="search"]:focus {
+  border: 2px solid gray;
+}
 .search-bar input[type="submit"] {
-  height: 28px;
+  height: 30px;
   width: 70px;
   border-radius: 0 5px 5px 0;
   background-color: rgb(170, 170, 170);
@@ -147,7 +144,16 @@ section {
   background-color: rgb(231, 231, 231);
   height: 550px;
 }
-
+#cat-link,
+#cat-link a {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(56, 22, 168);
+  text-decoration: underline;
+}
+#cat-link a:hover {
+  color: gray;
+}
 #categories {
   font-size: xx-large;
   font-weight: 600;
@@ -160,10 +166,13 @@ section {
 .card {
   line-height: 22px;
   background-color: white;
-  width: 230px;
+  width: 240px;
   height: 310px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px black;
+}
+.card-image {
+  height: 50%;
 }
 .card-img {
   border-radius: 15px 15px 0 0;
@@ -173,17 +182,15 @@ section {
   line-height: 25px;
   text-align: center;
 }
-/* **********************  all courses section **************** */
-.all-courses {
-  display: flex;
-  margin-top: 50px;
+.card-content input {
+  margin: 15px;
 }
+/* **********************  all courses section **************** */
 .course-card {
-  width: 430px;
-  height: 170px;
-  margin: 0 55px;
+  height: 180px;
   border: 1px solid lightgray;
   box-shadow: 1px 1px 5px lightgray;
+  margin: 15px 0;
 }
 .course-card h1 {
   letter-spacing: 3px;
@@ -198,13 +205,14 @@ section {
   margin: 5px 0;
 }
 .course-card ul li {
-  margin-left: 143px;
+  margin-top: 20px;
+  margin-left: 34%;
 }
 .course-card ul li:hover {
   cursor: pointer;
 }
 section a h1 {
-  margin-left: 190px;
+  margin-left: 150px;
   color: rgb(56, 22, 168);
   display: inline;
   text-decoration: underline;
@@ -267,8 +275,19 @@ section a h1:hover {
   text-align: left;
   padding-left: 40px;
 }
+#links {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 2rem;
+}
+.link a i {
+  color: black;
+  font-size: 3rem;
+}
 .send-us-mes-text {
   text-align: center;
+  border-right: 1px solid gray;
 }
 /* &&&&&&****************** footer******************* */
 footer {
