@@ -12,9 +12,8 @@
   width: 50%;
   text-align: center;
 }
-.l3 {
-  width: 25%;
-  text-align: center;
+.l4 {
+  width: 30%;
 }
 .col {
   margin: 0 10px;
@@ -28,21 +27,24 @@ a {
   color: white;
 }
 .btn {
+  display: inline-block;
   width: 140px;
   height: 35px;
   background-color: rgb(14, 187, 255);
   border-radius: 25px;
   text-align: center;
   padding-top: 8px;
+  transition: transform 0.3s;
 }
 .btn:hover {
+  transform: scale(1.1, 1.1);
   cursor: pointer;
   box-shadow: 1px 1px 5px black;
 }
 
 .small-btn {
-  height: 30px;
-  width: 80px;
+  height: 35px;
+  width: 90px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -57,57 +59,90 @@ a {
   width: 80%;
   margin: auto;
 }
-/* *************************   first navbar ******************************** */
+.hide-on-large {
+  display: none;
+}
+/* *************************   header section ******************************** */
 header {
   width: 100%;
   height: 60px;
-  box-shadow: 5px black;
+  padding-top: 12px;
 }
-.logo h1 {
+.logo a p {
+  color: black;
+  text-align: left;
+  font-size: xx-large;
+  font-weight: 700;
+}
+.signin {
+  transition: transform 0.3s;
+  background-color: white;
+  border: 1px solid rgb(18, 176, 233);
+}
+.signin a {
   color: black;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
+.signin:hover {
+  transform: scale(1.1, 1.1);
 }
-.navbtn ul {
+.sign-i-u {
   display: flex;
+  justify-content: flex-end;
 }
-.navbtn ul li {
-  text-align: center;
-  padding-top: 8px;
-  font-weight: 500;
+.sign-i-u li {
+  font-weight: 520;
   font-size: large;
   margin-left: 30px;
 }
-.navbtn ul li:hover {
-  cursor: pointer;
+
+.navigation i {
+  font-size: 1.7rem;
+  padding: 6px 0 0 20px;
+  color: rgb(33, 141, 212);
+  transition: transform 1s;
 }
+.navigation i:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+
 /* *************************   second navbar ******************************** */
 .nav-wrapper {
+  padding-top: 5px;
   width: 100%;
   height: 45px;
   background-color: rgb(14, 187, 255);
-}
-.nav-btn ul {
   display: flex;
 }
-.nav-btn ul li {
-  padding: 10px 12px 0;
+.nav-btn {
+  display: flex;
+}
+.nav-btn li {
+  position: relative;
+}
+.nav-btn li a {
   font-size: 18px;
+  font-weight: 600;
+  padding: 0 10px;
+  transition: 0.3s ease;
 }
-.nav-btn ul li:hover {
-  cursor: pointer;
-  background-color: rgb(30, 150, 230);
-  height: 45px;
+.nav-btn li a:hover,
+.nav-btn li a:focus {
+  color: #818181;
 }
-.search-bar {
-  padding-top: 10px;
+.nav-btn li a:focus::after,
+.nav-btn li a:hover::after {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #818181;
+  position: absolute;
+  bottom: -5px;
+  left: 10px;
 }
 .search-bar input[type="search"] {
   height: 30px;
-  width: 270px;
+  width: 17rem;
   border-radius: 5px;
   outline: none;
   padding-left: 6px;
@@ -118,7 +153,7 @@ header {
 }
 .search-bar input[type="submit"] {
   height: 30px;
-  width: 70px;
+  width: 5rem;
   border-radius: 0 5px 5px 0;
   background-color: rgb(170, 170, 170);
   border: none;
@@ -128,10 +163,34 @@ header {
   cursor: pointer;
   background-color: rgb(133, 133, 133);
 }
+.search-icon {
+  display: flex;
+  font-size: 25px;
+  font-weight: 500;
+  color: blue;
+}
+.search-icon span {
+  margin-right: 15px;
+  color: white;
+}
 /* ------------------------- main content -------------------- */
 section {
   margin-top: 50px;
 }
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.main-content-img {
+  width: 45%;
+}
+.main-content-text {
+  width: 45%;
+  text-align: center;
+}
+
 .paragraph {
   font-size: large;
   font-weight: 500;
@@ -142,71 +201,104 @@ section {
 #statistic {
   width: 100%;
   background-color: rgb(231, 231, 231);
-  height: 550px;
-}
-#cat-link,
-#cat-link a {
-  text-align: center;
-  margin-top: 20px;
-  color: rgb(56, 22, 168);
-  text-decoration: underline;
-}
-#cat-link a:hover {
-  color: gray;
+  height: auto;
 }
 #categories {
   font-size: xx-large;
   font-weight: 600;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 .cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.cards + div {
+  height: 50px;
 }
 .card {
-  line-height: 22px;
+  position: relative;
+  justify-content: center;
+  line-height: 30px;
   background-color: white;
-  width: 240px;
-  height: 310px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 5px black;
+  width: 250px;
+  height: 315px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(138, 191, 212);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-0.7rem);
 }
 .card-image {
   height: 50%;
 }
 .card-img {
-  border-radius: 15px 15px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 .card-content {
   padding: 10px 0;
   line-height: 25px;
   text-align: center;
 }
-.card-content input {
-  margin: 15px;
+.card-btn {
+  text-align: right;
+  border: none;
+  background-color: rgb(82, 167, 224);
+  height: 32px;
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.card-btn:hover {
+  cursor: pointer;
+  background-color: #818181;
+}
+.card-btn i {
+  padding-top: 4px;
+  font-size: 18px;
+  color: #f1f1f1;
 }
 /* **********************  all courses section **************** */
+.card-wrapper {
+  width: 49.9999%;
+  padding: 2% 3%;
+}
+.cards {
+  display: flex;
+}
 .course-card {
-  height: 180px;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  width: 550px;
+  gap: 1.5rem;
+  border-radius: 5px;
+  background-color: rgb(190, 218, 229);
   border: 1px solid lightgray;
-  box-shadow: 1px 1px 5px lightgray;
+  box-shadow: 0px 0px 10px rgb(104, 195, 228);
   margin: 15px 0;
+  line-height: 20px;
+  transition: transform 0.3s;
+}
+.course-card:hover {
+  transform: translateY(11px);
 }
 .course-card h1 {
-  letter-spacing: 3px;
   text-align: center;
   font-size: xx-large;
   padding-top: 30px;
 }
 .course-card p {
-  letter-spacing: 3px;
   text-align: center;
   font-size: large;
   margin: 5px 0;
-}
-.course-card ul li {
-  margin-top: 20px;
-  margin-left: 34%;
 }
 .course-card ul li:hover {
   cursor: pointer;
@@ -221,18 +313,30 @@ section a h1:hover {
   color: gray;
 }
 /* ****************** join us section ****************** */
+.join-us {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+  justify-content: center;
+}
 #join-us-section {
   background-color: lightgrey;
   padding-top: 45px;
   height: 450px;
 }
+.join-us-image {
+  height: 350px;
+  width: 500px;
+}
+.join-us-content {
+  width: 400px;
+  text-align: center;
+}
 #join-us-text {
-  margin-top: 20px;
+  margin: 20px 0 30px 0;
   line-height: 25px;
 }
-.join-us-btn {
-  margin: 30px 0 0 180px;
-}
+
 .title {
   letter-spacing: 2px;
   font-size: xx-large;
@@ -240,10 +344,8 @@ section a h1:hover {
   margin: 15px 0;
 }
 
-/* ************************ contact us ************************* */
-#contact-us {
-  height: 400px;
-}
+/* ************************ feedback section ************************* */
+
 .sub-btn {
   width: 75px;
   height: 32px;
@@ -259,48 +361,266 @@ section a h1:hover {
   padding-left: 10px;
   border: none;
   border-radius: 5px;
-  width: 400px;
+  width: 25rem;
   height: 40px;
-  margin-bottom: 20px;
+  margin: 5px 0 20px 0;
   background-color: lightgray;
   outline: none;
+}
+.address {
+  padding-left: 20px;
+  margin-top: 1.5rem;
+  text-align: left;
 }
 .message {
   height: 120px;
 }
 .input-field:focus {
-  box-shadow: 1px 1px 7px black;
+  box-shadow: 0px 0px 5px gray;
 }
 #message-form {
   text-align: left;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 #links {
   display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  gap: 2rem;
+  justify-content: left;
+  margin-top: 20px;
+  gap: 0.5rem;
 }
-.link a i {
+.link i {
   color: black;
-  font-size: 3rem;
+  font-size: 1.7rem;
+  padding-left: 20px;
+  transition: transform 0.3s;
+}
+.link i:hover {
+  transform: scale(1.3, 1.3);
+}
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .send-us-mes-text {
+  width: 40%;
+  height: 370px;
   text-align: center;
   border-right: 1px solid gray;
+}
+.feedback-inputs-field {
+  margin-bottom: 30px;
 }
 /* &&&&&&****************** footer******************* */
 footer {
   background-color: gray;
-  height: 250px;
-  padding-top: 40px;
+  height: auto;
+  padding-top: 30px;
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
 }
 .footer-links {
+  width: 220px;
   text-align: left;
   line-height: 25px;
+  margin-bottom: 20px;
 }
 #last-footer {
   background-color: lightgray;
   text-align: center;
   height: 25px;
+}
+/* *************************************************************************
+*********************************************************************** */
+@media (max-width: 940px) {
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+    background-color: rgb(18, 176, 233);
+  }
+
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  .m8 {
+    width: 80%;
+  }
+  .col {
+    justify-content: center;
+  }
+  .hide-on-mid-and-small {
+    display: none;
+  }
+  .hide-on-large {
+    display: inline-block;
+  }
+  .search-bar {
+    justify-content: right;
+  }
+}
+@media (max-width: 1255px) {
+  .course-card {
+    width: 490px;
+  }
+}
+@media (max-width: 1123px) {
+  .course-card {
+    width: 430px;
+  }
+}
+@media (max-width: 1000px) {
+  .hide-on-mid {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .hide-on-small-and-large {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  .course-card {
+    width: 630px;
+  }
+}
+@media (max-width: 794px) {
+  /* main content responsive */
+  .main-content-img {
+    width: 600px;
+  }
+  .main-content-text {
+    width: 600px;
+  }
+  /* join us section responsive */
+  #join-us-section {
+    height: auto;
+  }
+  .join-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .join-us-image {
+    width: 500px;
+  }
+  .join-us-content {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 500px;
+  }
+  /* feedback section responsive */
+  .send-us-mes-text {
+    width: 400px;
+    border: none;
+  }
+}
+@media (max-width: 600px) {
+  .logo a p {
+    font-size: 21px;
+    font-weight: 800;
+    padding-top: 8px;
+  }
+  .hide-on-small {
+    display: none;
+  }
+  .hide-on-mid {
+    display: inline;
+  }
+  .hide-on-small-and-large {
+    display: none;
+  }
+}
+@media (max-width: 470px) {
+  .signup {
+    width: 100px;
+  }
+  .logo a p {
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 13px;
+  }
+}
+@media (max-width: 450px) {
+  /* input field responsive  */
+  .input-field {
+    width: 23rem;
+  }
+}
+@media (max-width: 550px) {
+  .search-bar input[type="search"] {
+    width: 12.5rem;
+  }
+  .search-bar input[type="submit"] {
+    width: 2.8rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .hide-on-mid-and-large {
+    display: none;
+  }
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .input-field {
+    width: 20rem;
+  }
+  .s6 {
+    width: 70%;
+  }
 }

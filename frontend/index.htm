@@ -17,15 +17,38 @@
   <body>
     <!-- ****************** header section ************************* -->
     <header>
-      <div class="container navbar">
-        <div class="logo">
-          <a href="index.htm"><h1>Code Tutor</h1></a>
-        </div>
-        <div class="navbtn">
-          <ul>
-            <li class="btn"><a href="#">Sign In</a></li>
-            <li class="btn"><a href="#">Sign Up</a></li>
-          </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col s4">
+            <div id="myNav" class="overlay hide-on-mid-and-large">
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">tutorials</a>
+                <a href="#">References</a>
+                <a href="#">Contact</a>
+                <a href="#">Sign In</a>
+                <a href="#">Sign Up</a>
+              </div>
+            </div>
+            <span class="hide-on-mid-and-large navigation" onclick="openNav()"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+          </div>
+          <div class="col l6 logo">
+            <div>
+              <a href="index.htm"><p>Code Tutor</p></a>
+            </div>
+          </div>
+          <div class="col l6">
+            <ul class="sign-i-u">
+              <li class="hide-on-small signin btn"><a href="#">Sign In</a></li>
+              <li class="btn signup"><a href="#">Sign Up</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -33,37 +56,40 @@
     <nav class="nav-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col l6">
-            <div class="nav-btn">
-              <ul>
-                <li><a href="#">Explore Tutorials</a></li>
-                <li><a href="#">References</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
-            </div>
+          <div class="col l6 hide-on-small">
+            <ul class="nav-btn">
+              <li><a class="active" href="#">Tutorials</a></li>
+              <li><a href="#">References</a></li>
+              <li><a href="contact.html">ContactUs</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
           </div>
-          <div class="col l6">
-            <div class="search-bar">
-              <form action="">
-                <input
-                  type="search"
-                  name=""
-                  id=""
-                  placeholder="What do you want to learn?"
-                />
-                <input type="submit" value="Search" />
-              </form>
-            </div>
+          <div class="col l6 m8">
+            <form class="search-bar" action="">
+              <input
+                class="hide-on-mid"
+                type="search"
+                name=""
+                id=""
+                placeholder="What do you want to learn?"
+              />
+              <input class="hide-on-mid" type="submit" value="Search" />
+            </form>
           </div>
+          <ul class="hide-on-small-and-large">
+            <li class="search-icon">
+              <span>Search</span>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
     <!-- ***************** bellow navbar section *************** -->
     <section>
       <div class="container">
-        <div class="row">
-          <div class="col l6">
+        <div class="main-content">
+          <div class="main-content-text">
             <h1 class="title">Grow Your skills to advance your career path</h1>
             <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
@@ -77,7 +103,7 @@
             <br />
             <input type="button" class="small-btn" value="Start Now" />
           </div>
-          <div class="col l6">
+          <div class="main-content-img">
             <img
               class="responsive-img"
               src="img/coding.jpg"
@@ -102,8 +128,11 @@
             </div>
             <div class="card-content">
               <h2>Web Development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <input type="button" value="Learn More" class="small-btn" />
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+              <div class="card-btn">
+                <a href="#">Learn More</a>
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -116,8 +145,11 @@
             </div>
             <div class="card-content">
               <h2>Desktop Development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <input type="button" value="Learn More" class="small-btn" />
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+              <div class="card-btn">
+                <a href="#">Learn More</a>
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -130,8 +162,11 @@
             </div>
             <div class="card-content">
               <h2>Machine Learning</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <input type="button" value="Learn More" class="small-btn" />
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+              <div class="card-btn">
+                <a href="#">Learn More</a>
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -144,90 +179,73 @@
             </div>
             <div class="card-content">
               <h2>Mobile Development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <input type="button" value="Learn More" class="small-btn" />
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+              <div class="card-btn">
+                <a href="#">Learn More</a>
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </div>
             </div>
           </div>
         </div>
-        <div id="cat-link">
-          <a href="#">All Categories</a>
-        </div>
+        <div></div>
       </div>
     </section>
     <!-- ***************** All courses section ********************* -->
     <section>
       <a href="#"><h1>All Courses</h1></a>
-      <div class="container">
-        <div class="row">
-          <div class="col l6">
-            <div class="course-card">
-              <h1>Python</h1>
-              <p>Papular Programming language</p>
-              <ul>
-                <li class="btn"><a href="#">Learn Python</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col l6">
-            <div class="course-card">
-              <h1>PHP</h1>
-              <p>A web server Programming language</p>
-              <ul>
-                <li class="btn"><a href="#">Learn PHP</a></li>
-              </ul>
-            </div>
-          </div>
+      <div class="container cards">
+        <div class="course-card">
+          <h1>Python</h1>
+          <p>Papular Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Python</a></li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="col l6">
-            <div class="course-card">
-              <h1>C++</h1>
-              <p>Papular Programming language</p>
-              <ul>
-                <li class="btn"><a href="#">Learn C++</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col l6">
-            <div class="course-card">
-              <h1>Bootstrap</h1>
-              <p>A CSS framework for design web pages</p>
-              <ul>
-                <li class="btn"><a href="#">Learn Bootstrap</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="course-card">
+          <h1>PHP</h1>
+          <p>A web server Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn PHP</a></li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="col l6">
-            <div class="course-card">
-              <h1>Java</h1>
-              <p>Papular Programming language</p>
-              <ul>
-                <li class="btn"><a href="#">Learn Java</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col l6">
-            <div class="course-card">
-              <h1>jQuery</h1>
-              <p>A JS library for developing web pages</p>
-              <ul>
-                <li class="btn"><a href="#">Learn jQuery</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="course-card">
+          <h1>C++</h1>
+          <p>Papular Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn C++</a></li>
+          </ul>
+        </div>
+        <div class="course-card">
+          <h1>Bootstrap</h1>
+          <p>A CSS framework for design web pages</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Bootstrap</a></li>
+          </ul>
+        </div>
+        <div class="course-card">
+          <h1>Java</h1>
+          <p>Papular Programming language</p>
+          <ul>
+            <li class="btn"><a href="#">Learn Java</a></li>
+          </ul>
+        </div>
+        <div class="course-card">
+          <h1>jQuery</h1>
+          <p>A JS library for developing web pages</p>
+          <ul>
+            <li class="btn"><a href="#">Learn jQuery</a></li>
+          </ul>
         </div>
       </div>
     </section>
     <!-- ****************** join us section ********************** -->
     <section id="join-us-section">
       <div class="container">
-        <div class="row">
-          <div class="col l6">
+        <div class="join-us">
+          <div class="join-us-image">
             <img class="responsive-img" src="img/joinus.jpg" alt="" />
           </div>
-          <div class="col l6">
+          <div class="join-us-content">
             <h1 class="title">
               Take the next step toward your personal and professional goals
               with (Code Tutor).
@@ -236,9 +254,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
               voluptate provident, ipsam pariatur voluptatum fuga! Laborum
             </p>
-            <ul>
-              <li class="join-us-btn btn"><a href="#">Join For Free</a></li>
-            </ul>
+            <a class="btn" href="#">Join For Free</a>
           </div>
         </div>
       </div>
@@ -246,13 +262,18 @@
     <!-- ***************** feedback section *********************** -->
     <section id="contact-us">
       <div class="container">
-        <div class="row">
-          <div class="col l6 send-us-mes-text">
+        <div class="feedback">
+          <div class="send-us-mes-text">
             <h1 class="title">Send Us Message</h1>
             <p>
               It is very important for us to keep in touch with you. So we are
               always ready to any Question that interests you.
             </p>
+            <div class="address">
+              <p>Our mailing address is:<br />Chahar Rahi Qamber Kabul(AFG)</p>
+              <span>Phone: +93728151500</span>
+            </div>
+
             <ul id="links">
               <li class="link">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -268,16 +289,18 @@
               </li>
             </ul>
           </div>
-          <div class="col l6">
-            <form id="message-form" action="">
-              <label for="">Your Name:</label>
+          <div class="feedback-inputs-field">
+            <form id="message-form" onsubmit="return checkMe()" action="">
+              <label for="">Your Name:</label><br />
               <input
+                id="user_name"
                 class="input-field"
                 type="text"
                 placeholder="Enter Your name "
               /><br />
               <label for="">Your Email:</label> <br />
               <input
+                id="email-field"
                 class="input-field"
                 type="email"
                 name=""
@@ -285,7 +308,10 @@
                 placeholder="Enter Your Email Address "
               /><br />
               <label for="message">Your Message:</label> <br />
-              <textarea class="input-field message"></textarea>
+              <textarea
+                id="message-text"
+                class="input-field message"
+              ></textarea>
               <br />
               <button class="sub-btn" type="submit">Submit</button>
             </form>
@@ -296,8 +322,8 @@
     <!-- ******************* footer ******************************* -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col l3 footer-links">
+        <div class="footer-content">
+          <div class="footer-links">
             <h3>Code Tutor</h3>
             <ul>
               <li><a href="#">Home</a></li>
@@ -308,7 +334,7 @@
               <li><a href="#">References</a></li>
             </ul>
           </div>
-          <div class="col l3 footer-links">
+          <div class="footer-links">
             <h3>DataBase</h3>
             <ul>
               <li><a href="#">Mysql</a></li>
@@ -319,7 +345,7 @@
               <li><a href="#">SQl lite</a></li>
             </ul>
           </div>
-          <div class="col l3 footer-links">
+          <div class="footer-links">
             <h3>Programming languages</h3>
             <ul>
               <li><a href="#">C++</a></li>
@@ -330,7 +356,7 @@
               <li><a href="#">C</a></li>
             </ul>
           </div>
-          <div class="col l3 footer-links">
+          <div class="footer-links">
             <h3>Web Development</h3>
             <ul>
               <li><a href="#">HTML</a></li>
@@ -347,5 +373,34 @@
     <div id="last-footer">
       <span>copy right &copy; Saboor Hemat</span>
     </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "30%";
+      }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      /* checking the form validation in feedback section */
+      function checkMe() {
+        let u_name = document.getElementById("user_name").value;
+        let email = document.getElementById("email-field").value;
+        let mess = document.getElementById("message-text").value;
+        if (u_name == "") {
+          alert("sorry, Please Enter your name!!!");
+          return false;
+        } else if (email == "") {
+          alert("sorry, please Enter your email!!");
+          return false;
+        } else if (mess == "") {
+          confirm("Do you want to submit empty feedback");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>
