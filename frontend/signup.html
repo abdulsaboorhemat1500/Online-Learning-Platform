@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .container {
+        width: 100rem;
+
+        margin: 10rem auto;
+        font-family: sans-serif;
+        background-color: rgb(14, 187, 255);
+      }
+      .section-signup {
+        padding: 4rem 6rem;
+        box-shadow: 0 0 14px 3px rgb(0, 72, 100);
+
+        /* background-image: url(/"sign.jpeg"); */
+      }
+      .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: rgb(5, 60, 131);
+      }
+      label {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: rgb(73, 73, 73);
+      }
+      input {
+        display: block;
+        height: 4.5rem;
+        border-radius: 2rem;
+        margin-bottom: 1.7rem;
+        padding-left: 2rem;
+        padding-right: 2.5rem;
+        font-size: 1.8rem;
+        border: 2px solid rgb(206, 202, 202);
+      }
+      .profile-img {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+      }
+      .form-EPCP-item input {
+        width: 90%;
+      }
+      .btn {
+        background-color: rgb(14, 187, 255);
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        border-radius: 2rem;
+        border: 2px solid white;
+        color: white;
+        box-shadow: 0 0 5px grey;
+      }
+      .btn:hover {
+        box-shadow: 0 0 10px rgb(6, 95, 131);
+      }
+      .btn-register {
+        width: 14rem;
+      }
+      .btn-quit {
+        margin-right: 1.5rem;
+        width: 10rem;
+      }
+      .file-input {
+        border: none;
+        width: 9rem;
+        border-radius: 0;
+      }
+
+      /* form grid section */
+
+      .sign-heading {
+        grid-column: 1/4;
+      }
+
+      .form-EPCP-item {
+        grid-column: 1/3;
+      }
+      .form-photo {
+        grid-column: 3/4;
+        grid-row: 2/5;
+        /* background-color: white; */
+        display: flex;
+
+        justify-content: center;
+      }
+      .form-btn {
+        display: flex;
+        justify-content: end;
+
+        grid-column: 1/4;
+        grid-row: 7/8;
+        width: 100%;
+      }
+
+      @media (max-width: 1006px) {
+        .container {
+          width: 85rem;
+        }
+      }
+      @media (max-width: 900px) {
+        .container {
+          width: 68rem;
+        }
+        .form {
+          grid-template-columns: 1fr 1fr;
+        }
+        .sign-heading {
+          grid-column: 1/3;
+        }
+        .form-EPCP-item {
+          grid-column: 1/3;
+        }
+        .form-photo {
+          grid-column: 2/3;
+          grid-row: 2/5;
+          /* background-color: white; */
+          display: flex;
+
+          justify-content: center;
+        }
+        .form-btn {
+          grid-column: 1/3;
+          grid-row: 8/9;
+        }
+      }
+      @media (max-width: 710px) {
+        .container {
+          width: 40rem;
+        }
+        .form {
+          grid-template-columns: 1fr;
+        }
+        .sign-heading {
+          grid-column: 1/2;
+        }
+        #name {
+          width: 90%;
+        }
+        #lastName {
+          width: 90%;
+        }
+        .form-EPCP-item {
+          grid-column: 1/2;
+        }
+        .form-photo {
+          grid-column: 1/2;
+          grid-row: 2/5;
+          /* background-color: white; */
+          display: flex;
+
+          justify-content: center;
+        }
+        .form-btn {
+          grid-column: 1/2;
+          grid-row: 10/11;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="section-signup">
+        <form action="" class="form">
+          <h1 class="sign-heading">Sign Up</h1>
+          <div class="form-name">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Name" />
+          </div>
+          <div class="form-last-name">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Last Name" />
+          </div>
+          <div class="form-EPCP-item">
+            <label for="emailAddress">Email Address</label>
+            <input type="email" id="emailAddress" placeholder="Email" />
+          </div>
+          <div class="form-EPCP-item">
+            <label for="password">password</label>
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+          <div class="form-EPCP-item">
+            <label for="confirmPassword"> Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" />
+          </div>
+          <div class="form-btn">
+            <div>
+              <button class="btn btn-quit">Quit</button>
+              <button class="btn btn-register" type="submit">Register</button>
+            </div>
+          </div>
+          <div class="form-photo">
+            <div>
+              <img class="profile-img" src="img/sign.jpeg" alt="" />
+              <input class="file-input" type="file" />
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
