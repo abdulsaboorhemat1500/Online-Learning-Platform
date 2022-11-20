@@ -182,15 +182,47 @@
 
         </div>
       </div>
-      <form class="form-section-part--2">
+      <form class="form-section-part--2" onsubmit="return submitFormData()">
         <h2>Login</h1>
-        <label>Email</label>
-        <input type="email" placeholder="Email" />
-        <label>Password </label>
-        <input type="password" placeholder="Password" />
+        <label id="email-label" for="email">Email</label>
+        <input id="email" type="email" placeholder="Email" />
+        <label id="password-label" for="password">Password </label>
+        <input id="password" type="password" placeholder="Password" />
         <button type="submit" class="sign-btn">Sign In</button>
         <a class="forget-link" href="#">forget password?</a>
       </form>
     </section>
+    <script>
+      function submitFormData(){
+        let email=document.getElementById("email");
+        
+        let password=document.getElementById("password");
+        let emailValue=email.value
+        let passwordValue=password.value
+        
+        if(emailValue==""){
+          let emailLabel=document.getElementById("email-label")
+          emailLabel.style.color="orange"
+          email.style.borderColor="orange"
+          return false
+          
+
+        }
+        if(passwordValue==""){
+           let passwordLabel=document.getElementById("password-label")
+          passwordLabel.style.color="orange"
+          password.style.borderColor="orange"
+          
+          return false
+
+        }
+        else{
+          return true
+        }
+        
+
+      }
+
+    </script>
   </body>
 </html>
