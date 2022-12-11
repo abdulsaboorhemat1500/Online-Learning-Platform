@@ -1,72 +1,75 @@
 <html>
 <head>
     <title>Contact design </title>
-    <style>
-     body{
-         padding: 0px;
-         margin: 0px;
-         
-        background-color:rgb(216, 202, 202);
-     }
-    #div1{
-          margin: 3%;
-          background-image: linear-gradient(130deg,green 28%,white 28%);
-          background-size: auto;
-          border-radius: 40px;
-          height: 87%;
-     } 
-     .inputtext{
-         margin: 10px;
-         padding:15px ;
-        width: 97%;
-        text-align:center;
-        border-radius: 20px;
-        
-     }
-
-     .subbutton{
-        text-align: center;
-        width: 30%;
-        margin-left:50% ;
-     }
-     .in{
-         width: 70%;
-         height: 100px;
-         margin-left: 20%;
-     }
-   .tabl{
-     width: 95%;
-     padding-left: 35%;
-    
-   }
-   .title
-   {
-        font-size: 30px;
-        padding-top: 10px;
-       margin-left: 5%; 
-     
-       
-   }
-
-    </style>
 </head>
+<link rel="stylesheet" href="cont.css">
+<script>
+    function submetten(){
+         let nam = document.getElementById("name").value;
+        let mob = document.getElementById("mobile").value;
+        let eml = document.getElementById("email").value;
+        let cors = document.getElementById("course").value;
+        let msg = document.getElementById("message").value;
+
+        if (nam==""){
+            alert("Type your user name!")
+            return false;
+        }
+        else if(mob== ""){
+            alert("Type your moble number!")
+            return false;
+        }
+        else if(eml== ""){
+            alert("Type your email!")
+            return false;
+        }
+        else if(cors== ""){
+            alert("Type your subject!")
+            return false;
+        }
+        else if(msg== ""){
+            alert("Type your message!")
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function resetten(){
+        if(confirm("Are you sure?")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }  
+</script>
 <body>
-    <div id="div1">
-        <div id="div2">
-            <form>
+    <div id="div1">          
+        
+       
+            <form onsubmit="submetten()" onreset="return resetten()">   
+         
                 <table class="tabl">
-                    <h3 class="title">Contact Us Form</h3>
-                    <tr><td>Name:</td><td><input type="text"  class="inputtext" placeholder="enter name..."/></td></tr>
-                    <tr><td>Mobile:</td><td><input type="text" name="mobile" class="inputtext" placeholder="enter mobile no..."/></td></tr>
-                    <tr><td>Email:</td><td><input type="email" name="email" class="inputtext" placeholder="enter email..."/></td></tr>
-                    <tr><td>Subject:</td><td><input type="text" name="course" class="inputtext" placeholder="enter subject"/></td></tr>
-                    <tr><td>Message:</td><td><textarea name="message" class="in" placeholder="enter your message..."></textarea></td></tr>
-                    <tr><td colspan="2" ><input type="submit" class="subbutton" value="submit"/></td></tr>
+                    <h3 class="title">Send Us Message</h3>
+                   
+                  
+                    <tr><td>Name:</td><td><input type="text" id="name" class="inputtext" placeholder="enter name..."/></td></tr>
+                    <tr><td>Mobile:</td><td><input type="text" id="mobile" class="inputtext" placeholder="enter mobile no..."/></td></tr>
+                    <tr><td>Email:</td><td><input type="email" id="email" class="inputtext" placeholder="enter email..."/></td></tr>
+                    <tr><td>Subject:</td><td><input type="text" id="course" class="inputtext" placeholder="enter subject"/></td></tr>
+                    <tr><td>Message:</td><td><textarea id="message" class="messag" placeholder="enter your message..."></textarea></td></tr>
+                    
                     
                 </table>
-            </form>
-        </div>
+                 <div class="a"><input type="submit" class="subbutton"   value="submit"/>
+                        <tr ><input type="reset" id="res" class="subbutton"  value="reset"/></div>   
+  
+   
+            </form> 
+
     </div>
+   
    
 </body>
 </html>

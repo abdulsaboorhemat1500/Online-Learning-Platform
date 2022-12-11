@@ -1,0 +1,72 @@
+
+body{
+    padding: 0px;
+    margin: 0px;
+   background-color:whitesmoke;
+}
+#div1{
+     margin: 3%;
+     background-image: linear-gradient(132deg,rgb(14,187,255) 28%,white 28%);
+     background-size: auto;
+     border-radius: 70px;
+     height: 87%;
+     box-shadow: 0 0 20px gray;
+     width: 80%;
+     margin-left: 11%;
+} 
+.inputtext{
+    margin: 8px;
+    padding:15px ;
+    margin-left: -15%;
+    width: 97%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+   
+}
+.messag{
+    width: 97%;
+    height: 100px;
+    margin-left: 2%;
+    background-color: whitesmoke;
+    border: none;
+    margin-left: -15%;
+    outline: none;
+    
+} 
+ .subbutton{
+   text-align: center;
+   border-radius: 100px;
+   background-color: rgb(14, 187, 255);
+   height: 40px;
+   border: none;
+   width: 24%;
+   outline: none;
+  
+
+
+}
+.tabl{
+width: 95%;
+padding-left: 40%;
+
+}
+.title
+{
+   font-size: 30px;
+   padding-top: 10px;
+   margin-left: 5%; 
+   
+}
+#res{
+margin-left: 0.5%;
+}
+
+textarea:hover,input:hover{
+   box-shadow: 0 0 5px grey;
+}
+.a{
+   margin-top: 1%;
+   display: flex;
+   margin-left: 57%;
+       }
