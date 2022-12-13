@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catagory</title>
+
+    <link rel="stylesheet" href="../css/course_section_style.css" />
+  </head>
+  <body>
+    <!-- ****************** header section ************************* -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col s4">
+            <div id="myNav" class="overlay hide-on-mid-and-large">
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">tutorials</a>
+                <a href="index.htm">Home</a>
+                <a href="#">Contact</a>
+                <a href="#">Sign In</a>
+                <a href="#">Sign Up</a>
+              </div>
+            </div>
+            <span class="hide-on-mid-and-large navigation" onclick="openNav()"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+          </div>
+          <div class="col l6 logo">
+            <div>
+              <a href="index.htm"><p>Code Tutor</p></a>
+            </div>
+          </div>
+          <div class="col l6">
+            <ul class="sign-i-u">
+              <li class="hide-on-small signin btn">
+                <a href="login.html">Sign In</a>
+              </li>
+              <li class="btn signup"><a href="signup.htm">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ******************* section navbar *********************** -->
+    <nav class="nav-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 hide-on-small">
+            <ul class="nav-btn">
+              <li><a class="active" href="index.htm">Home</a></li>
+              <li><a href="course_section.html">tutorials</a></li>
+              <li><a href="contact.html">ContactUs</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <div class="col l6 m8">
+            <form class="search-bar" action="">
+              <input
+                class="hide-on-mid"
+                type="search"
+                name=""
+                id=""
+                placeholder="What do you want to learn?"
+              />
+              <input class="hide-on-mid" type="submit" value="Search" />
+            </form>
+          </div>
+          <ul class="hide-on-small-and-large">
+            <li class="search-icon">
+              <span>Search</span>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="catagory" id="catagory">
+      <h1 class="c_heading">CodeTutor Catagories</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/network.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>Network</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/AI.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>Artificial Antiligence</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/programing.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>Programming languages</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/web.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>Web Engeenring</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/front.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>FrontEnd Web</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/back.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>BackEnd Web</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/machin.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>Machin Learning</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+
+        <div class="box">
+          <img
+            onmousedown="onmousedownn(event)"
+            src="../img/datascience.jpg"
+            class="resp-img"
+            alt=""
+          />
+          <h3>Data Science</h3>
+          <p>New Courses</p>
+          <a href="#" class="cardbtn">Start Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************* footer ******************************* -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <h3>Code Tutor</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">References</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>DataBase</h3>
+            <ul>
+              <li><a href="#">Mysql</a></li>
+              <li><a href="#">Sql Server</a></li>
+              <li><a href="#">Postgresql</a></li>
+              <li><a href="#">Oracle</a></li>
+              <li><a href="#">Sql</a></li>
+              <li><a href="#">SQl lite</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Programming languages</h3>
+            <ul>
+              <li><a href="#">C++</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">Java</a></li>
+              <li><a href="#">C#</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">C</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Web Development</h3>
+            <ul>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">React</a></li>
+              <li><a href="#">Nodejs</a></li>
+              <li><a href="#">Bootstrap</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="last-footer">
+      <span>copy right &copy; Khalid Mubaraze</span>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "30%";
+      }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      /*dont allow right click on image */
+      function onmousedownn(event) {
+        if (event.button == 2) {
+          alert("You can not right click on image");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
