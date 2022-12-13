@@ -42,6 +42,7 @@
         font-size: 2rem;
         margin-bottom: 1rem;
         color: rgb(73, 73, 73);
+        font-weight: 600;
       }
       input {
         display: block;
@@ -72,6 +73,7 @@
         border: 2px solid white;
         color: white;
         box-shadow: 0 0 5px grey;
+        cursor: pointer;
       }
       .btn:hover {
         box-shadow: 0 0 10px rgb(6, 95, 131);
@@ -82,6 +84,9 @@
       .btn-quit {
         margin-right: 1.5rem;
         width: 10rem;
+        text-align: center;
+        text-decoration: none;
+        line-height: 2.1rem;
       }
       .file-input {
         border: none;
@@ -93,6 +98,7 @@
 
       .sign-heading {
         grid-column: 1/4;
+        color: white;
       }
 
       .form-EPCP-item {
@@ -213,7 +219,8 @@
           </div>
           <div class="form-btn">
             <div>
-              <button class="btn btn-quit">Quit</button>
+              <a class="btn btn-quit" href="index.htm">Quit</a>
+              <!-- <button class="btn btn-quit">Quit</button> -->
               <button class="btn btn-register" type="submit">Register</button>
             </div>
           </div>
@@ -233,6 +240,15 @@
     </div>
     <script>
       function submitFormData() {
+        //lebals
+        let nameLabel = document.getElementById("name-label");
+        let lastNameLabel = document.getElementById("lastName-lable");
+        let emailLabel = document.getElementById("email-label");
+        let passwordLabel = document.getElementById("password-label");
+        let confirmPasswordLabel = document.getElementById(
+          "confirm-password-label"
+        );
+
         let name = document.getElementById("name");
         let lastName = document.getElementById("lastName");
         let emailAddress = document.getElementById("emailAddress");
@@ -245,39 +261,44 @@
         let passwordValue = password.value;
         let confirmPasswordValue = confirmPassword.value;
 
+        //reset to defualt
+        nameLabel.style.color = "rgb(73, 73, 73)";
+        name.style.borderColor = "rgb(206, 202, 202)";
+        lastNameLabel.style.color = "rgb(73, 73, 73)";
+        lastName.style.borderColor = "rgb(206, 202, 202)";
+        emailLabel.style.color = "rgb(73, 73, 73)";
+        emailAddress.style.borderColor = "rgb(206, 202, 202)";
+        passwordLabel.style.color = "rgb(73, 73, 73)";
+        password.style.borderColor = "rgb(206, 202, 202)";
+        confirmPasswordLabel.style.color = "rgb(73, 73, 73)";
+        confirmPassword.style.borderColor = "rgb(206, 202, 202)";
+
         if (nameValue == "") {
-          let nameLabel = document.getElementById("name-label");
-          nameLabel.style.color = "orange";
-          name.style.borderColor = "orange";
+          nameLabel.style.color = "red";
+          name.style.borderColor = "red";
           return false;
         }
         if (lastNameValue == "") {
-          let lastNameLabel = document.getElementById("lastName-label");
-          lastNameLabel.style.color = "orange";
-          lastName.style.borderColor = "orange";
+          lastNameLabel.style.color = "red";
+          lastName.style.borderColor = "red";
 
           return false;
         }
         if (emailAddressValue == "") {
-          let emailLabel = document.getElementById("email-label");
-          emailLabel.style.color = "orange";
-          emailAddress.style.borderColor = "orange";
+          emailLabel.style.color = "red";
+          emailAddress.style.borderColor = "red";
 
           return false;
         }
         if (passwordValue == "") {
-          let passwordLabel = document.getElementById("password-label");
-          passwordLabel.style.color = "orange";
-          password.style.borderColor = "orange";
+          passwordLabel.style.color = "red";
+          password.style.borderColor = "red";
 
           return false;
         }
         if (confirmPasswordValue == "") {
-          let confirmPasswordLabel = document.getElementById(
-            "confirm-password-label"
-          );
-          confirmPasswordLabel.style.color = "orange";
-          confirmPassword.style.borderColor = "orange";
+          confirmPasswordLabel.style.color = "red";
+          confirmPassword.style.borderColor = "red";
 
           return false;
         } else {

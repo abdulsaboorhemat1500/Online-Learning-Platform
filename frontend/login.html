@@ -102,12 +102,16 @@
       .signup-btn{
         margin-top: 2.4rem;
         width: 50%;
-        height: 4.7rem;
+        height: 4.5rem;
         border-radius: 2rem;
         border: 2px solid white;
         background-color: rgb(14, 187, 255);
         color: white;
         font-size: 1.8rem;
+        display: inline-block;
+        text-align: center;
+        line-height: 4.5rem;
+        text-decoration: none;
 
 
       }
@@ -115,14 +119,6 @@
         box-shadow: 0 0 10px grey;
         cursor: pointer;
       }
-      /* .logo{
-        height: 15rem;
-        width: 15rem;
-        border: 3px solid white;
-        transform: rotate(45deg);
-        margin-top: 6rem;
-        margin-left: 11rem;
-      } */
       .for-more{
         color: white;
         text-decoration: none;
@@ -176,7 +172,7 @@
         <h2 class="heading-part--1">Welcome to Tutor</h3>
         <p class="text-part--1"> Create account or sign in for study</p>
         <p class="text-part--1">Free courses</p>
-        <button class="signup-btn">Sign Up</button>
+        <a class="signup-btn" href="signup.html">Sign Up</a>
         <p> <a href="" class="for-more">  for more click here</a></p>
         <!-- <div class="logo"> -->
 
@@ -194,24 +190,33 @@
     </section>
     <script>
       function submitFormData(){
-        let email=document.getElementById("email");
+        let emailLabel=document.getElementById("email-label")
         
+        let email=document.getElementById("email");
+        let passwordLabel=document.getElementById("password-label")
         let password=document.getElementById("password");
         let emailValue=email.value
         let passwordValue=password.value
+
+        //reset to defualt
+        emailLabel.style.color="rgb(107, 105, 105)";
+        email.style.borderColor="rgb(206, 202, 202)";
+        passwordLabel.style.color="rgb(107, 105, 105)"
+        password.style.borderColor="rgb(206, 202, 202)";
         
         if(emailValue==""){
-          let emailLabel=document.getElementById("email-label")
-          emailLabel.style.color="orange"
-          email.style.borderColor="orange"
+          
+          emailLabel.style.color="red"
+          email.style.borderColor="red"
+          
           return false
           
 
         }
         if(passwordValue==""){
-           let passwordLabel=document.getElementById("password-label")
-          passwordLabel.style.color="orange"
-          password.style.borderColor="orange"
+           
+          passwordLabel.style.color="red"
+          password.style.borderColor="red"
           
           return false
 
